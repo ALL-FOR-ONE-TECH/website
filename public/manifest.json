@@ -1,0 +1,21 @@
+{
+  "name": "AFOT - Digital Innovation & Technology Solutions",
+  "short_name": "AFOT",
+  "description": "Transform your business with cutting-edge digital solutions from AFOT.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#8b5cf6",
+  "icons": [
+    {
+      "src": "/logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
