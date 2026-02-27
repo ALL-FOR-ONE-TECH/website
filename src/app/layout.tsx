@@ -181,9 +181,9 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${poppins.variable}`}>
       <head>
         {/* Favicon and App Icons */}
-        <link rel="icon" href="/website/logo.png" type="image/png" />
-        <link rel="apple-touch-icon" href="/website/logo.png" />
-        <link rel="manifest" href="/website/manifest.json" />
+        <link rel="icon" href="/logo.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/logo.png" />
+        <link rel="manifest" href="/manifest.json" />
 
         {/* DNS Prefetch & Preconnect for Performance */}
         <link rel="dns-prefetch" href="https://fonts.googleapis.com" />

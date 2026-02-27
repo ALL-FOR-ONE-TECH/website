@@ -1,8 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  basePath: '/website',
-  assetPrefix: '/website/',
   trailingSlash: true,
   images: {
     formats: ['image/avif', 'image/webp'],

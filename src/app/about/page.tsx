@@ -19,25 +19,25 @@ const team = [
   {
     name: 'V. V. Karthikeyan',
     role: 'Founder & CEO',
-    image: '/website/team/karthi.jpg',
+    image: '/team/karthi.jpg',
     gradient: 'from-violet-500 to-purple-600'
   },
   {
     name: 'S. Gowtham',
     role: 'Cofounder & CTO',
-    image: '/website/team/gowtham.png',
+    image: '/team/gowtham.png',
     gradient: 'from-blue-500 to-cyan-600'
   },
   {
     name: 'J. Mukunth',
     role: 'Design & Hardware Tech Lead',
-    image: '/website/team/mukunth.png',
+    image: '/team/mukunth.png',
     gradient: 'from-emerald-500 to-teal-600'
   },
   {
     name: 'G. Kalanithi Selven',
     role: 'Lead Developer',
-    image: '/website/team/kalanithi.jpg',
+    image: '/team/kalanithi.jpg',
     gradient: 'from-orange-500 to-amber-600'
   },
 ]
