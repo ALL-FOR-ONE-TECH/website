@@ -82,13 +82,6 @@ export const metadata: Metadata = {
       },
     ],
   },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'AFOT - Digital Innovation & Technology Solutions',
-    description:
-      'Transform your business with cutting-edge digital solutions from AFOT.',
-    images: ['/website/og-image.svg'],
-  },
   alternates: {
     canonical: 'https://afot.in',
   },

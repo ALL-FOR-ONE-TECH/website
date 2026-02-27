@@ -34,7 +34,7 @@ type Props = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params
   const post = posts[slug]
-  
+
   if (!post) {
     return { title: 'Post Not Found' }
   }
@@ -89,7 +89,7 @@ export default async function BlogPostPage({ params }: Props) {
             </time>
           </header>
 
-          <div 
+          <div
             className="prose prose-invert prose-purple max-w-none
               prose-headings:font-display prose-headings:text-white
               prose-p:text-gray-300 prose-p:leading-relaxed
@@ -102,14 +102,6 @@ export default async function BlogPostPage({ params }: Props) {
           <div className="mt-12 pt-8 border-t border-dark-border">
             <h3 className="text-xl font-semibold text-white mb-4">Share this article</h3>
             <div className="flex gap-4">
-              <a
-                href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title)}&url=${encodeURIComponent(`https://afot.in/blog/${slug}`)}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-secondary text-sm"
-              >
-                Share on X
-              </a>
               <a
                 href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(`https://afot.in/blog/${slug}`)}`}
                 target="_blank"
