@@ -37,7 +37,7 @@ export function Header() {
         {/* Logo */}
         <Link href="/" className="flex items-center justify-center w-10 h-10 rounded-full bg-white/5 hover:bg-white/10 transition-colors mr-2">
           <Image
-            src="/logo.png"
+            src="/website/logo.png"
             alt="AFOT"
             width={24}
             height={24}

@@ -87,7 +87,7 @@ export const metadata: Metadata = {
     title: 'AFOT - Digital Innovation & Technology Solutions',
     description:
       'Transform your business with cutting-edge digital solutions from AFOT.',
-    images: ['/og-image.svg'],
+    images: ['/website/og-image.svg'],
     creator: '@afot',
     site: '@afot',
   },
@@ -191,9 +191,9 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${poppins.variable}`}>
       <head>
         {/* Favicon and App Icons */}
-        <link rel="icon" href="/logo.png" type="image/png" />
-        <link rel="apple-touch-icon" href="/logo.png" />
-        <link rel="manifest" href="/manifest.json" />
+        <link rel="icon" href="/website/logo.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/website/logo.png" />
+        <link rel="manifest" href="/website/manifest.json" />
 
         {/* DNS Prefetch & Preconnect for Performance */}
         <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
