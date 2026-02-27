@@ -125,7 +125,7 @@ const jsonLd = {
   contactPoint: {
     '@type': 'ContactPoint',
     contactType: 'customer service',
-    email: 'hello@afot.in',
+    email: 'allforonetech.in@gmail.com',
     availableLanguage: ['English', 'Hindi'],
     areaServed: 'Worldwide',
   },

@@ -8,32 +8,32 @@ function RocketIllustration({ className = '' }: { className?: string }) {
   return (
     <svg className={className} viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
       {/* Rocket body */}
-      <path d="M100 30L70 100L100 120L130 100L100 30Z" fill="#1a1a2e" stroke="#8b5cf6" strokeWidth="2"/>
-      <path d="M85 100L75 130L100 120L125 130L115 100" fill="#0f0f1a" stroke="#8b5cf6" strokeWidth="2"/>
-      
+      <path d="M100 30L70 100L100 120L130 100L100 30Z" fill="#1a1a2e" stroke="#8b5cf6" strokeWidth="2" />
+      <path d="M85 100L75 130L100 120L125 130L115 100" fill="#0f0f1a" stroke="#8b5cf6" strokeWidth="2" />
+
       {/* Rocket window */}
-      <circle cx="100" cy="70" r="15" fill="#0f0f1a" stroke="#8b5cf6" strokeWidth="2"/>
-      <circle cx="100" cy="70" r="8" fill="#8b5cf6" opacity="0.3"/>
-      
+      <circle cx="100" cy="70" r="15" fill="#0f0f1a" stroke="#8b5cf6" strokeWidth="2" />
+      <circle cx="100" cy="70" r="8" fill="#8b5cf6" opacity="0.3" />
+
       {/* Flames */}
-      <path d="M90 130L100 160L110 130" fill="#8b5cf6" opacity="0.6"/>
-      <path d="M95 130L100 150L105 130" fill="#a855f7" opacity="0.8"/>
-      
+      <path d="M90 130L100 160L110 130" fill="#8b5cf6" opacity="0.6" />
+      <path d="M95 130L100 150L105 130" fill="#a855f7" opacity="0.8" />
+
       {/* Stars around */}
-      <circle cx="50" cy="50" r="2" fill="#8b5cf6" opacity="0.6"/>
-      <circle cx="150" cy="60" r="2" fill="#8b5cf6" opacity="0.5"/>
-      <circle cx="40" cy="120" r="1.5" fill="#a855f7" opacity="0.4"/>
-      <circle cx="160" cy="130" r="1.5" fill="#a855f7" opacity="0.5"/>
-      <circle cx="60" cy="160" r="2" fill="#8b5cf6" opacity="0.3"/>
-      <circle cx="140" cy="170" r="2" fill="#8b5cf6" opacity="0.4"/>
-      
+      <circle cx="50" cy="50" r="2" fill="#8b5cf6" opacity="0.6" />
+      <circle cx="150" cy="60" r="2" fill="#8b5cf6" opacity="0.5" />
+      <circle cx="40" cy="120" r="1.5" fill="#a855f7" opacity="0.4" />
+      <circle cx="160" cy="130" r="1.5" fill="#a855f7" opacity="0.5" />
+      <circle cx="60" cy="160" r="2" fill="#8b5cf6" opacity="0.3" />
+      <circle cx="140" cy="170" r="2" fill="#8b5cf6" opacity="0.4" />
+
       {/* Orbit rings */}
-      <ellipse cx="100" cy="100" rx="60" ry="20" stroke="#4c1d95" strokeWidth="1" opacity="0.3" fill="none"/>
-      <ellipse cx="100" cy="100" rx="80" ry="30" stroke="#4c1d95" strokeWidth="1" opacity="0.2" fill="none"/>
-      
+      <ellipse cx="100" cy="100" rx="60" ry="20" stroke="#4c1d95" strokeWidth="1" opacity="0.3" fill="none" />
+      <ellipse cx="100" cy="100" rx="80" ry="30" stroke="#4c1d95" strokeWidth="1" opacity="0.2" fill="none" />
+
       {/* Decorative dots */}
-      <circle cx="30" cy="80" r="3" fill="#8b5cf6" opacity="0.2"/>
-      <circle cx="170" cy="90" r="3" fill="#8b5cf6" opacity="0.2"/>
+      <circle cx="30" cy="80" r="3" fill="#8b5cf6" opacity="0.2" />
+      <circle cx="170" cy="90" r="3" fill="#8b5cf6" opacity="0.2" />
     </svg>
   )
 }
@@ -91,10 +91,10 @@ export function CTA() {
                       </svg>
                     </Link>
                     <a
-                      href="mailto:hello@afot.in"
+                      href="mailto:allforonetech.in@gmail.com"
                       className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-white/10 hover:border-white/20 text-white font-semibold rounded-xl transition-all hover:bg-white/5"
                     >
-                      hello@afot.in
+                      allforonetech.in@gmail.com
                     </a>
                   </div>
                 </motion.div>

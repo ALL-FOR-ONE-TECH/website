@@ -103,7 +103,7 @@ export default function TermsPage() {
               <p>If you have any questions or concerns about these Terms and Conditions, please contact us at:</p>
               <div className="mt-4 space-y-2">
                 <p><strong>Email:</strong> allforonetech.in@gmail.com</p>
-                <p><strong>Alternate Email:</strong> hello@afot.in</p>
+                <p><strong>Alternate Email:</strong> allforonetech.in@gmail.com</p>
                 <p><strong>Location:</strong> Chennai, Tamil Nadu, India</p>
               </div>
             </section>
