@@ -63,6 +63,22 @@ const projects = [
     tech: ['AWS', 'Terraform', 'Kubernetes'],
     Illustration: CloudIllustration,
   },
+  {
+    title: 'OverDrive-DB SDK',
+    category: 'Open Source',
+    description: 'Official SDK for OverDrive-DB. High-performance database driver. (Server coming soon)',
+    tech: ['Rust', 'SDK', 'Database'],
+    Illustration: CloudIllustration,
+    href: 'https://github.com/ALL-FOR-ONE-TECH/OverDrive-DB_SDK',
+  },
+  {
+    title: 'AFOT IDE',
+    category: 'Open Source',
+    description: 'A powerful, lightweight IDE designed for modern web development and digital innovation.',
+    tech: ['TypeScript', 'Electron', 'React'],
+    Illustration: WebDevIllustration,
+    href: 'https://github.com/ALL-FOR-ONE-TECH/AFOT_IDE',
+  },
 ]
 
 export default function ProjectsPage() {
@@ -77,27 +93,45 @@ export default function ProjectsPage() {
           />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {projects.map((project) => (
-              <GlassCard key={project.title} className="group cursor-pointer">
-                <div className="aspect-video rounded-xl bg-gradient-to-br from-violet-500/10 to-transparent mb-4 flex items-center justify-center overflow-hidden">
-                  <project.Illustration className="w-full h-28 group-hover:scale-110 transition-transform duration-500" />
-                </div>
-                <span className="inline-block px-3 py-1 text-xs font-medium bg-violet-500/20 text-violet-400 rounded-full">
-                  {project.category}
-                </span>
-                <h3 className="text-xl font-semibold text-white mt-2 mb-2 group-hover:text-violet-400 transition-colors">
-                  {project.title}
-                </h3>
-                <p className="text-gray-400 text-sm mb-4">{project.description}</p>
-                <div className="flex flex-wrap gap-2">
-                  {project.tech.map((t) => (
-                    <span key={t} className="px-2 py-1 text-xs bg-white/5 border border-white/10 rounded-lg text-gray-300">
-                      {t}
-                    </span>
-                  ))}
-                </div>
-              </GlassCard>
-            ))}
+            {projects.map((project) => {
+              const CardContent = (
+                <GlassCard className="h-full group cursor-pointer">
+                  <div className="aspect-video rounded-xl bg-gradient-to-br from-violet-500/10 to-transparent mb-4 flex items-center justify-center overflow-hidden">
+                    <project.Illustration className="w-full h-28 group-hover:scale-110 transition-transform duration-500" />
+                  </div>
+                  <span className="inline-block px-3 py-1 text-xs font-medium bg-violet-500/20 text-violet-400 rounded-full">
+                    {project.category}
+                  </span>
+                  <h3 className="text-xl font-semibold text-white mt-2 mb-2 group-hover:text-violet-400 transition-colors">
+                    {project.title}
+                  </h3>
+                  <p className="text-gray-400 text-sm mb-4">{project.description}</p>
+                  <div className="flex flex-wrap gap-2 mt-auto">
+                    {project.tech.map((t) => (
+                      <span key={t} className="px-2 py-1 text-xs bg-white/5 border border-white/10 rounded-lg text-gray-300">
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                </GlassCard>
+              )
+
+              if (project.href) {
+                return (
+                  <a
+                    key={project.title}
+                    href={project.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block h-full transition-transform hover:-translate-y-1"
+                  >
+                    {CardContent}
+                  </a>
+                )
+              }
+
+              return <div key={project.title}>{CardContent}</div>
+            })}
           </div>
         </div>
       </section>

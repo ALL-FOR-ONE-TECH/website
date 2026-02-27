@@ -4,7 +4,13 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { SectionHeading } from '@/components/ui/SectionHeading'
 import { GlassCard } from '@/components/ui/GlassCard'
-import { ShoppingIllustration, MobileAppIllustration, DataIllustration } from '@/components/illustrations'
+import {
+  ShoppingIllustration,
+  MobileAppIllustration,
+  DataIllustration,
+  WebDevIllustration,
+  CloudIllustration,
+} from '@/components/illustrations'
 
 const projects = [
   {
@@ -24,6 +30,18 @@ const projects = [
     category: 'UI/UX Design',
     description: 'Intuitive dashboard for healthcare providers to manage patient data.',
     Illustration: DataIllustration,
+  },
+  {
+    title: 'OverDrive-DB SDK',
+    category: 'Open Source',
+    description: 'Official SDK for OverDrive-DB. High-performance database driver.',
+    Illustration: CloudIllustration,
+  },
+  {
+    title: 'AFOT IDE',
+    category: 'Open Source',
+    description: 'A powerful, lightweight IDE designed for modern web development.',
+    Illustration: WebDevIllustration,
   },
 ]
 
