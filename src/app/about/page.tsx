@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import NextImage from 'next/image'
 import { CTA } from '@/components/sections/CTA'
 import { SectionHeading } from '@/components/ui/SectionHeading'
 import { GlassCard } from '@/components/ui/GlassCard'
@@ -15,10 +16,30 @@ export const metadata: Metadata = {
 }
 
 const team = [
-  { name: 'Alex Kumar', role: 'Founder & CEO', initials: 'AK', gradient: 'from-violet-500 to-purple-600' },
-  { name: 'Priya Sharma', role: 'Lead Developer', initials: 'PS', gradient: 'from-blue-500 to-cyan-600' },
-  { name: 'Raj Patel', role: 'Design Lead', initials: 'RP', gradient: 'from-emerald-500 to-teal-600' },
-  { name: 'Maya Singh', role: 'Project Manager', initials: 'MS', gradient: 'from-orange-500 to-amber-600' },
+  {
+    name: 'V. V. Karthikeyan',
+    role: 'Founder & CEO',
+    image: '/website/team/karthi.jpg',
+    gradient: 'from-violet-500 to-purple-600'
+  },
+  {
+    name: 'S. Gowtham',
+    role: 'Cofounder & CTO',
+    image: '/website/team/gowtham.png',
+    gradient: 'from-blue-500 to-cyan-600'
+  },
+  {
+    name: 'J. Mukunth',
+    role: 'Design & Hardware Tech Lead',
+    image: '/website/team/mukunth.png',
+    gradient: 'from-emerald-500 to-teal-600'
+  },
+  {
+    name: 'G. Kalanithi Selven',
+    role: 'Lead Developer',
+    image: '/website/team/kalanithi.jpg',
+    gradient: 'from-orange-500 to-amber-600'
+  },
 ]
 
 const values = [
@@ -98,12 +119,23 @@ export default function AboutPage() {
           />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {team.map((member) => (
-              <GlassCard key={member.name} className="text-center">
-                <div className={`w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-br ${member.gradient} flex items-center justify-center text-white font-bold text-xl`}>
-                  {member.initials}
+              <GlassCard key={member.name} className="text-center group">
+                <div className="relative w-32 h-32 mx-auto mb-6 rounded-2xl overflow-hidden border-2 border-white/5 group-hover:border-violet-500/50 transition-all duration-300">
+                  {member.image ? (
+                    <NextImage
+                      src={member.image}
+                      alt={member.name}
+                      fill
+                      className="object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                  ) : (
+                    <div className={`w-full h-full bg-gradient-to-br ${member.gradient} flex items-center justify-center text-white font-bold text-2xl`}>
+                      {member.name.split(' ').map(n => n[0]).join('')}
+                    </div>
+                  )}
                 </div>
-                <h3 className="text-lg font-semibold text-white">{member.name}</h3>
-                <p className="text-violet-400 text-sm">{member.role}</p>
+                <h3 className="text-xl font-display font-bold text-white mb-1">{member.name}</h3>
+                <p className="text-violet-400 font-medium text-sm">{member.role}</p>
               </GlassCard>
             ))}
           </div>

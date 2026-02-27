@@ -88,8 +88,6 @@ export const metadata: Metadata = {
     description:
       'Transform your business with cutting-edge digital solutions from AFOT.',
     images: ['/website/og-image.svg'],
-    creator: '@afot',
-    site: '@afot',
   },
   alternates: {
     canonical: 'https://afot.in',
@@ -130,9 +128,8 @@ const jsonLd = {
     areaServed: 'Worldwide',
   },
   sameAs: [
-    'https://github.com/whoamikiddie',
-    'https://linkedin.com/company/afot',
-    'https://twitter.com/afot',
+    'https://github.com/ALL-FOR-ONE-TECH',
+    'https://linkedin.com/company/all-for-one-tech',
   ],
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
