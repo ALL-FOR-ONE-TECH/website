@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { StarfieldBackground } from '@/components/ui/StarfieldBackground'
 import { ParticleField } from '@/components/ui/ParticleField'
-import { DeveloperIllustration } from '@/components/illustrations'
+import { GlowingOrb } from '@/components/ui/GlowingOrb'
 
 export function Hero() {
   return (
@@ -104,24 +104,14 @@ export function Hero() {
             </Link>
           </motion.div>
 
-          {/* Hero Illustration */}
+          {/* Hero Orb */}
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.9, duration: 1 }}
-            className="relative max-w-4xl mx-auto"
+            className="relative max-w-2xl mx-auto"
           >
-            <div className="relative rounded-2xl overflow-hidden">
-              {/* Glow effect behind */}
-              <div className="absolute inset-0 bg-gradient-to-t from-violet-600/20 via-transparent to-transparent blur-2xl scale-110" />
-
-              {/* Main illustration container */}
-              <div className="relative rounded-2xl overflow-hidden border border-white/10 bg-gradient-to-b from-white/5 to-transparent backdrop-blur-sm">
-                <div className="p-8 md:p-12 flex items-center justify-center">
-                  <DeveloperIllustration className="w-full max-w-2xl h-auto" />
-                </div>
-              </div>
-            </div>
+            <GlowingOrb />
           </motion.div>
         </motion.div>
       </div>

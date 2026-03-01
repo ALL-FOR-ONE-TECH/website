@@ -3,6 +3,8 @@ import { Inter, Poppins } from 'next/font/google'
 import './globals.css'
 import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
+import { PageLoader } from '@/components/ui/PageLoader'
+import { BackToTop } from '@/components/ui/BackToTop'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -33,17 +35,23 @@ export const metadata: Metadata = {
     template: '%s | AFOT',
   },
   description:
-    'AFOT delivers cutting-edge digital solutions, web development, mobile apps, AI integration, and technology consulting to transform your business for the future.',
+    'AFOT (All For One Tech) delivers cutting-edge web development, mobile apps, AI integration, cloud solutions, UI/UX design, and cybersecurity services in Chennai, India. Transform your business with technology.',
   keywords: [
-    'digital solutions',
-    'web development',
-    'mobile apps',
-    'technology consulting',
-    'software development',
-    'AI integration',
-    'cloud solutions',
-    'cybersecurity',
     'AFOT',
+    'All For One Tech',
+    'web development Chennai',
+    'mobile app development India',
+    'software development company India',
+    'AI integration services',
+    'cloud solutions India',
+    'cybersecurity services Chennai',
+    'UI UX design agency',
+    'digital transformation partner',
+    'custom software development',
+    'React Next.js developer India',
+    'tech startup India',
+    'affordable web development',
+    'freelance software agency Chennai',
   ],
   authors: [{ name: 'AFOT', url: 'https://afot.in' }],
   creator: 'AFOT',
@@ -66,21 +74,27 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: 'website',
-    locale: 'en_US',
+    locale: 'en_IN',
     url: 'https://afot.in',
-    siteName: 'AFOT',
+    siteName: 'AFOT - All For One Tech',
     title: 'AFOT - Digital Innovation & Technology Solutions',
     description:
-      'Transform your business with cutting-edge digital solutions from AFOT.',
+      'Web development, mobile apps, AI, cloud & cybersecurity services from Chennai, India. AFOT — your digital transformation partner.',
     images: [
       {
-        url: '/og-image.svg',
+        url: '/og-image.png',
         width: 1200,
         height: 630,
         alt: 'AFOT - Digital Innovation & Technology Solutions',
-        type: 'image/svg+xml',
+        type: 'image/png',
       },
     ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'AFOT - Digital Innovation & Technology Solutions',
+    description: 'Web dev, mobile apps, AI, cloud & cybersecurity. Chennai-based tech agency.',
+    images: ['/og-image.png'],
   },
   alternates: {
     canonical: 'https://afot.in',
@@ -111,7 +125,8 @@ const jsonLd = {
   address: {
     '@type': 'PostalAddress',
     addressCountry: 'IN',
-    addressLocality: 'India',
+    addressLocality: 'Chennai',
+    addressRegion: 'Tamil Nadu',
   },
   contactPoint: {
     '@type': 'ContactPoint',
@@ -168,6 +183,14 @@ const jsonLd = {
           description: 'User interface and experience design services',
         },
       },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Cybersecurity',
+          description: 'Security audits, penetration testing, and compliance',
+        },
+      },
     ],
   },
 }
@@ -202,9 +225,11 @@ export default function RootLayout({
         <meta httpEquiv="x-dns-prefetch-control" content="on" />
       </head>
       <body className="bg-dark text-white antialiased font-sans">
+        <PageLoader />
         <Header />
         <main className="min-h-screen">{children}</main>
         <Footer />
+        <BackToTop />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

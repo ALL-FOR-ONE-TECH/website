@@ -117,10 +117,10 @@ export default function ContactPage() {
                 <h3 className="text-lg font-semibold text-white mb-4">Why Choose AFOT?</h3>
                 <ul className="space-y-3 text-gray-400 text-sm">
                   {[
-                    'Expert team with 5+ years experience',
-                    '50+ successful projects delivered',
-                    '99% client satisfaction rate',
-                    'Transparent communication',
+                    '20+ projects delivered across web, mobile & AI',
+                    '10+ happy clients who trust us',
+                    '2+ years of focused expertise',
+                    '94% client satisfaction rate',
                   ].map((item) => (
                     <li key={item} className="flex items-center gap-2">
                       <span className="w-5 h-5 rounded-full bg-violet-500/20 flex items-center justify-center flex-shrink-0">

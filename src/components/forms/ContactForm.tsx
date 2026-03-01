@@ -1,9 +1,9 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 
-const WEB3FORMS_ACCESS_KEY = 'fb16f608-5b23-48bc-8a9f-c0ec073995a3'
+const WEB3FORMS_ACCESS_KEY = '1d1567e8-21de-4bd4-b404-487d89b7630f'
 
 // XSS Sanitization - escapes HTML entities and removes dangerous patterns
 function sanitizeInput(input: string): string {
@@ -39,6 +39,30 @@ export function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [error, setError] = useState<string | null>(null)
+  const [countdown, setCountdown] = useState(6)
+
+  const resetForm = () => {
+    setIsSubmitted(false)
+    setCountdown(6)
+    setError(null)
+  }
+
+  useEffect(() => {
+    if (!isSubmitted) return
+    setCountdown(6)
+    const interval = setInterval(() => {
+      setCountdown(prev => {
+        if (prev <= 1) {
+          clearInterval(interval)
+          resetForm()
+          return 0
+        }
+        return prev - 1
+      })
+    }, 1000)
+    return () => clearInterval(interval)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isSubmitted])
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -114,13 +138,36 @@ export function ContactForm() {
         animate={{ opacity: 1, scale: 1 }}
         className="text-center py-12"
       >
-        <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-green-400 to-emerald-500 flex items-center justify-center">
-          <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
-            <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-          </svg>
+        {/* Success icon with pulse */}
+        <div className="relative w-20 h-20 mx-auto mb-6">
+          <div className="absolute inset-0 rounded-full bg-emerald-500/20 animate-ping" />
+          <div className="relative w-20 h-20 rounded-full bg-gradient-to-br from-emerald-400 to-green-600 flex items-center justify-center shadow-[0_0_30px_rgba(52,211,153,0.4)]">
+            <svg className="w-9 h-9 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+          </div>
         </div>
-        <h3 className="text-2xl font-semibold text-white mb-2">Message Sent!</h3>
-        <p className="text-gray-400">We will get back to you within 24 hours.</p>
+
+        <h3 className="text-2xl font-bold text-white mb-2">Message Sent! 🎉</h3>
+        <p className="text-gray-400 mb-2">We&apos;ll get back to you within 24 hours.</p>
+        <p className="text-gray-500 text-sm mb-6">Form resets in <span className="text-violet-400 font-semibold">{countdown}s</span></p>
+
+        {/* Progress bar */}
+        <div className="w-48 h-1 mx-auto rounded-full bg-white/5 overflow-hidden mb-6">
+          <motion.div
+            className="h-full bg-gradient-to-r from-violet-500 to-emerald-400 rounded-full"
+            initial={{ width: '100%' }}
+            animate={{ width: '0%' }}
+            transition={{ duration: 6, ease: 'linear' }}
+          />
+        </div>
+
+        <button
+          onClick={resetForm}
+          className="text-sm text-violet-400 hover:text-violet-300 underline underline-offset-4 transition-colors"
+        >
+          Send another message
+        </button>
       </motion.div>
     )
   }

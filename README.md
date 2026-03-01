@@ -26,7 +26,7 @@ npm run build
 npm start
 ```
 
-## Project Structure
+## Project Structures
 
 ```
 src/

@@ -6,10 +6,10 @@ import { TeamIllustration } from '@/components/illustrations'
 import { AnimatedCounter } from '@/components/ui/AnimatedCounter'
 
 const stats = [
-  { value: 50, label: 'Projects Delivered', suffix: '+' },
-  { value: 30, label: 'Happy Clients', suffix: '+' },
-  { value: 5, label: 'Years Experience', suffix: '+' },
-  { value: 99, label: 'Client Satisfaction', suffix: '%' },
+  { value: 20, label: 'Projects Delivered', suffix: '+' },
+  { value: 10, label: 'Happy Clients', suffix: '+' },
+  { value: 2, label: 'Years Experience', suffix: '+' },
+  { value: 94, label: 'Client Satisfaction', suffix: '%' },
 ]
 
 export function About() {
@@ -51,13 +51,10 @@ export function About() {
           >
             <SectionHeading label="About Us" title="Innovating for Tomorrow" centered={false} />
             <p className="text-gray-400 text-lg leading-relaxed mb-6">
-              AFOT is a forward-thinking technology company dedicated to helping businesses thrive in the digital age. We
-              combine technical expertise with creative innovation to deliver solutions that make a real impact.
+              AFOT is a young, ambitious technology company built by a team of passionate engineers and creators. We partner closely with businesses to turn ideas into high-performing digital products — fast, secure, and built to scale.
             </p>
             <p className="text-gray-400 leading-relaxed mb-8">
-              Our team of passionate developers, designers, and strategists work collaboratively to transform complex
-              challenges into elegant, user-friendly solutions. We believe in building long-term partnerships with our
-              clients.
+              In just over two years, we have delivered 20+ projects across web, mobile, AI, and cloud — earning the trust of 10+ clients through honest communication, sharp execution, and a genuine commitment to quality. Every project we take on gets our full focus, not just a template.
             </p>
 
             {/* Stats Grid */}

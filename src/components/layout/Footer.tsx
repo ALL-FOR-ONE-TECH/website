@@ -6,13 +6,13 @@ const footerLinks = {
     { href: '/about', label: 'About Us' },
     { href: '/services', label: 'Services' },
     { href: '/projects', label: 'Projects' },
-    { href: '/blog', label: 'Blog' },
   ],
   services: [
     { href: '/services#web', label: 'Web Development' },
     { href: '/services#mobile', label: 'Mobile Apps' },
     { href: '/services#cloud', label: 'Cloud Solutions' },
     { href: '/services#ai', label: 'AI Integration' },
+    { href: '/services#cyber', label: 'Cybersecurity' },
   ],
   legal: [
     { href: '/privacy', label: 'Privacy Policy' },
